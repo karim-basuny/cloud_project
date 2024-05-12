@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Data</title>    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            margin: 0;
+            padding: 0;
+        }
+        
+        #gradesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        #gradesTable thead th {
+            background-color: #f2f2f2;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #gradesTable tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #gradesTable tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #gradesTable tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        #gradesTable tbody td:last-child {
+            text-align:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Data</h1>
+    <table id="gradesTable">
+        <thead>
+            <tr>
+                
+                <th>User Name</th>
+                <th>User ID</th>
+                <th>Course Name</th>
+                <th>Grade</th>
+                <th>CGPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+                <td>{{ user[3] }}</td>
+                <td>{{ user[4] }}</td>
+                <td>{{ user[5] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

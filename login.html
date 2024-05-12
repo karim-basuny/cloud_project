@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="/static/styl.css">-->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+
+        /* Add your other CSS rules here */
+    </style>
+    
+
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="post" id="loginForm" >
+            <label for="id">ID:</label><br>
+            <input type="text" id="id" name="id"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+        <p id="error-message"></p>
+    </div>    
+</body>
+</html>
+
+
+
+
